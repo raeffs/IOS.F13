@@ -11,8 +11,9 @@
 @implementation CMDataProvider
 
 - (id)init {
-    if (self = [super init]) {
-        _memberNames = [NSArray arrayWithObjects:@"Peter", @"Gabriela", @"Hans", @"Martin", nil];
+    if (self = [super init])
+    {
+        self.memberNames = [NSArray arrayWithObjects:@"Peter", @"Gabriela", @"Hans", @"Martin", nil];
     }
     return self;
 }

@@ -19,6 +19,7 @@
 		642DF30E16DFE323004FC94E /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642DF30D16DFE323004FC94E /* CMViewController.m */; };
 		642DF31116DFE323004FC94E /* CMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642DF30F16DFE323004FC94E /* CMViewController.xib */; };
 		64FFF1D616E08677004F0F40 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FFF1D516E08677004F0F40 /* CMDataProvider.m */; };
+		64FFF1D916E09FE6004F0F40 /* CMPersonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FFF1D816E09FE6004F0F40 /* CMPersonData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		642DF31016DFE323004FC94E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CMViewController.xib; sourceTree = "<group>"; };
 		64FFF1D416E08677004F0F40 /* CMDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataProvider.h; sourceTree = "<group>"; };
 		64FFF1D516E08677004F0F40 /* CMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataProvider.m; sourceTree = "<group>"; };
+		64FFF1D716E09FE6004F0F40 /* CMPersonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPersonData.h; sourceTree = "<group>"; };
+		64FFF1D816E09FE6004F0F40 /* CMPersonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPersonData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				642DF2FB16DFE323004FC94E /* Supporting Files */,
 				64FFF1D416E08677004F0F40 /* CMDataProvider.h */,
 				64FFF1D516E08677004F0F40 /* CMDataProvider.m */,
+				64FFF1D716E09FE6004F0F40 /* CMPersonData.h */,
+				64FFF1D816E09FE6004F0F40 /* CMPersonData.m */,
 			);
 			path = CourseMembers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				642DF30516DFE323004FC94E /* CMAppDelegate.m in Sources */,
 				642DF30E16DFE323004FC94E /* CMViewController.m in Sources */,
 				64FFF1D616E08677004F0F40 /* CMDataProvider.m in Sources */,
+				64FFF1D916E09FE6004F0F40 /* CMPersonData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
