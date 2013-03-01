@@ -27,7 +27,7 @@ const bool USE_PERSON_DATA = true;
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
     
-    CMDataProvider *provider = [[CMDataProvider alloc] init];
+    CMDataProvider *provider = [CMDataProvider sharedDataProvider];
     if (USE_PERSON_DATA)
     {
         for (int index = 0; index < provider.memberPersons.count; index++)

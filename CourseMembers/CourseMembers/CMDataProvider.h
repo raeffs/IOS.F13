@@ -14,4 +14,6 @@
 
 @property(strong) NSArray * memberPersons;
 
++ (CMDataProvider*) sharedDataProvider;
+
 @end

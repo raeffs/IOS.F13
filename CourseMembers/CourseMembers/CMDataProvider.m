@@ -11,6 +11,8 @@
 
 @implementation CMDataProvider
 
+static CMDataProvider* sharedDataProvider;
+
 - (id)init {
     if (self = [super init])
     {
@@ -24,6 +26,15 @@
                               nil];
     }
     return self;
+}
+
++ (CMDataProvider*) sharedDataProvider
+{
+    if (sharedDataProvider == NULL)
+    {
+        sharedDataProvider = [[CMDataProvider alloc] init];
+    }
+    return sharedDataProvider;
 }
 
 @end
