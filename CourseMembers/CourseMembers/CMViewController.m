@@ -30,10 +30,21 @@
     }
 }
 
-- (void)addLabelForName:(NSString*)text atPosition:(int)index
+- (void)addLabelForName:(NSString*)text atPosition:(int)position
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50 + index * 25, 320, 25)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50 + position * 25, 320, 25)];
     label.text = text;
+    switch (position % 3) {
+        case 0:
+            label.textColor = [UIColor redColor];
+            break;
+        case 1:
+            label.textColor = [UIColor blueColor];
+            break;
+        case 2:
+            label.textColor = [UIColor greenColor];
+            break;
+    }
     [self.view addSubview:label];
 }
 
