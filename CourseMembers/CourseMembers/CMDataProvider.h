@@ -12,4 +12,6 @@
 
 @property(strong) NSArray * memberNames;
 
+@property(strong) NSArray * memberPersons;
+
 @end

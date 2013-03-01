@@ -8,12 +8,15 @@
 
 #import "CMViewController.h"
 #import "CMDataProvider.h"
+#import "CMPersonData.h"
 
 @interface CMViewController ()
 
 @end
 
 @implementation CMViewController
+
+const bool USE_PERSON_DATA = true;
 
 - (void)viewDidLoad
 {
@@ -25,8 +28,19 @@
     [self.view addSubview:label];
     
     CMDataProvider *provider = [[CMDataProvider alloc] init];
-    for (int index = 0; index < provider.memberNames.count; index++) {
-        [self addLabelForName:provider.memberNames[index] atPosition:index];
+    if (USE_PERSON_DATA)
+    {
+        for (int index = 0; index < provider.memberPersons.count; index++)
+        {
+            [self addLabelForPerson:provider.memberPersons[index] atPosition:index];
+        }
+    }
+    else
+    {
+        for (int index = 0; index < provider.memberNames.count; index++)
+        {
+            [self addLabelForName:provider.memberNames[index] atPosition:index];
+        }
     }
 }
 
@@ -46,6 +60,21 @@
             break;
     }
     [self.view addSubview:label];
+}
+
+- (void)addLabelForPerson:(CMPersonData*)person atPosition:(int)position
+{
+    UILabel *labelFirst = [[UILabel alloc] initWithFrame:CGRectMake(10, 50 + position * 25, 100, 25)];
+    UILabel *labelLast = [[UILabel alloc] initWithFrame:CGRectMake(110, 50 + position * 25, 100, 25)];
+    UILabel *labelPlz = [[UILabel alloc] initWithFrame:CGRectMake(210, 50 + position * 25, 100, 25)];
+    
+    labelFirst.text = person.firstName;
+    labelLast.text = person.lastName;
+    labelPlz.text = [NSString stringWithFormat:@"%i", person.plz];
+    
+    [self.view addSubview:labelFirst];
+    [self.view addSubview:labelLast];
+    [self.view addSubview:labelPlz];
 }
 
 - (void)didReceiveMemoryWarning
