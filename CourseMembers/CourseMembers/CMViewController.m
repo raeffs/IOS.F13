@@ -7,6 +7,7 @@
 //
 
 #import "CMViewController.h"
+#import "CMDataProvider.h"
 
 @interface CMViewController ()
 
@@ -21,6 +22,18 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     label.text = @"Teilnehmer iOS Kurs";
     label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    
+    CMDataProvider *provider = [[CMDataProvider alloc] init];
+    for (int index = 0; index < provider.memberNames.count; index++) {
+        [self addLabelForName:provider.memberNames[index] atPosition:index];
+    }
+}
+
+- (void)addLabelForName:(NSString*)text atPosition:(int)index
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50 + index * 25, 320, 25)];
+    label.text = text;
     [self.view addSubview:label];
 }
 
