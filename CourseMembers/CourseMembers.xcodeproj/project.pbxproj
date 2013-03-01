@@ -18,6 +18,7 @@
 		642DF30B16DFE323004FC94E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 642DF30A16DFE323004FC94E /* Default-568h@2x.png */; };
 		642DF30E16DFE323004FC94E /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642DF30D16DFE323004FC94E /* CMViewController.m */; };
 		642DF31116DFE323004FC94E /* CMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642DF30F16DFE323004FC94E /* CMViewController.xib */; };
+		64FFF1D616E08677004F0F40 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FFF1D516E08677004F0F40 /* CMDataProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		642DF30C16DFE323004FC94E /* CMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMViewController.h; sourceTree = "<group>"; };
 		642DF30D16DFE323004FC94E /* CMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMViewController.m; sourceTree = "<group>"; };
 		642DF31016DFE323004FC94E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CMViewController.xib; sourceTree = "<group>"; };
+		64FFF1D416E08677004F0F40 /* CMDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataProvider.h; sourceTree = "<group>"; };
+		64FFF1D516E08677004F0F40 /* CMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				642DF30D16DFE323004FC94E /* CMViewController.m */,
 				642DF30F16DFE323004FC94E /* CMViewController.xib */,
 				642DF2FB16DFE323004FC94E /* Supporting Files */,
+				64FFF1D416E08677004F0F40 /* CMDataProvider.h */,
+				64FFF1D516E08677004F0F40 /* CMDataProvider.m */,
 			);
 			path = CourseMembers;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				642DF30116DFE323004FC94E /* main.m in Sources */,
 				642DF30516DFE323004FC94E /* CMAppDelegate.m in Sources */,
 				642DF30E16DFE323004FC94E /* CMViewController.m in Sources */,
+				64FFF1D616E08677004F0F40 /* CMDataProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				642DF31616DFE323004FC94E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

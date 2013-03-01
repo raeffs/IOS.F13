@@ -20,6 +20,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     label.text = @"Teilnehmer iOS Kurs";
+    label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
 }
 
