@@ -10,4 +10,8 @@
 
 @interface IBDViewController : UIViewController
 
+- (IBAction)sliderValueChanged:(UISlider*)sender;
+
+@property(strong) IBOutlet UILabel * sliderLabel;
+
 @end
