@@ -14,6 +14,8 @@
 
 @implementation IBDViewController
 
+bool alertDisplayed = false;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,6 +31,20 @@
 {
     float value = sender.value;
     _sliderLabel.text = [NSString stringWithFormat:@"%.02f", value];
+    
+    if (value >= 90)
+    {
+        if (!alertDisplayed)
+        {
+            alertDisplayed = true;
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Wow..." message:@"You just did it!" delegate:nil cancelButtonTitle:@"Yes!" otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    else
+    {
+        alertDisplayed = false;
+    }
 }
 
 - (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender
@@ -63,5 +79,11 @@
         [_spinner startAnimating];
         [sender setTitle:@"stop animation" forState:UIControlStateNormal];
     }
+}
+
+- (IBAction)infoButtonPressed:(UIButton*)sender
+{
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"App-Info" message:@"Macht viele kleine Dinge..." delegate:nil cancelButtonTitle:@"Zur Kenntnis genommen!" otherButtonTitles:nil];
+    [alertView show];
 }
 @end

@@ -20,4 +20,6 @@
 
 - (IBAction)spinButtonPressed:(UIButton*)sender;
 
+- (IBAction)infoButtonPressed:(UIButton*)sender;
+
 @end
