@@ -14,4 +14,6 @@
 
 @property(strong) IBOutlet UILabel * sliderLabel;
 
+- (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender;
+
 @end

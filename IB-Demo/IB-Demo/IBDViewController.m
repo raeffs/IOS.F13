@@ -29,4 +29,21 @@
     float value = sender.value;
     _sliderLabel.text = [NSString stringWithFormat:@"%.02f", value];
 }
+- (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.view.backgroundColor = [UIColor blackColor];
+            break;
+            
+        case 1:
+            self.view.backgroundColor = [UIColor grayColor];
+            break;
+            
+        case 2:
+            self.view.backgroundColor = [UIColor purpleColor];
+            
+        default:
+            break;
+    }
+}
 @end
