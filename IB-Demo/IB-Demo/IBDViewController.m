@@ -25,12 +25,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sliderValueChanged:(UISlider*)sender {
+- (IBAction)sliderValueChanged:(UISlider*)sender
+{
     float value = sender.value;
     _sliderLabel.text = [NSString stringWithFormat:@"%.02f", value];
 }
-- (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender {
-    switch (sender.selectedSegmentIndex) {
+
+- (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender
+{
+    switch (sender.selectedSegmentIndex)
+    {
         case 0:
             self.view.backgroundColor = [UIColor blackColor];
             break;
@@ -44,6 +48,20 @@
             
         default:
             break;
+    }
+}
+
+- (IBAction)spinButtonPressed:(UIButton*)sender
+{
+    if (_spinner.isAnimating)
+    {
+        [_spinner stopAnimating];
+        [sender setTitle:@"start animation" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [_spinner startAnimating];
+        [sender setTitle:@"stop animation" forState:UIControlStateNormal];
     }
 }
 @end

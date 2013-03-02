@@ -16,4 +16,8 @@
 
 - (IBAction)colorButtonValueChanged:(UISegmentedControl*)sender;
 
+@property(strong) IBOutlet UIActivityIndicatorView * spinner;
+
+- (IBAction)spinButtonPressed:(UIButton*)sender;
+
 @end
