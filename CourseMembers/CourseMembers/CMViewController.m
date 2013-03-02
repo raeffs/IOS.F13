@@ -16,7 +16,7 @@
 
 @implementation CMViewController
 
-const bool USE_PERSON_DATA = true;
+const bool USE_PERSON_DATA = NO;
 
 - (void)viewDidLoad
 {
@@ -34,14 +34,14 @@ const bool USE_PERSON_DATA = true;
     CMDataProvider *provider = [CMDataProvider sharedDataProvider];
     if (USE_PERSON_DATA)
     {
-        for (int index = 0; index < provider.memberPersons.count; index++)
+        for (int index = 0; index < [provider.memberPersons count]; index++)
         {
             [self addLabelForPerson:provider.memberPersons[index] atPosition:index];
         }
     }
     else
     {
-        for (int index = 0; index < provider.memberNames.count; index++)
+        for (int index = 0; index < [provider.memberNames count]; index++)
         {
             [self addLabelForName:provider.memberNames[index] atPosition:index];
         }
