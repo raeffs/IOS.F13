@@ -18,6 +18,8 @@
 		646BBA2D16EA868D00F54285 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 646BBA2C16EA868D00F54285 /* Default-568h@2x.png */; };
 		646BBA3016EA868D00F54285 /* MDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646BBA2F16EA868D00F54285 /* MDViewController.m */; };
 		646BBA3316EA868D00F54285 /* MDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646BBA3116EA868D00F54285 /* MDViewController.xib */; };
+		646BBA4416EA8B6F00F54285 /* MDSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646BBA4216EA8B6F00F54285 /* MDSecondViewController.m */; };
+		646BBA4516EA8B6F00F54285 /* MDSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646BBA4316EA8B6F00F54285 /* MDSecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		646BBA2E16EA868D00F54285 /* MDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDViewController.h; sourceTree = "<group>"; };
 		646BBA2F16EA868D00F54285 /* MDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDViewController.m; sourceTree = "<group>"; };
 		646BBA3216EA868D00F54285 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDViewController.xib; sourceTree = "<group>"; };
+		646BBA4116EA8B6F00F54285 /* MDSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSecondViewController.h; sourceTree = "<group>"; };
+		646BBA4216EA8B6F00F54285 /* MDSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSecondViewController.m; sourceTree = "<group>"; };
+		646BBA4316EA8B6F00F54285 /* MDSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDSecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,9 @@
 		646BBA1C16EA868D00F54285 /* ModelDemo */ = {
 			isa = PBXGroup;
 			children = (
+				646BBA4116EA8B6F00F54285 /* MDSecondViewController.h */,
+				646BBA4216EA8B6F00F54285 /* MDSecondViewController.m */,
+				646BBA4316EA8B6F00F54285 /* MDSecondViewController.xib */,
 				646BBA2516EA868D00F54285 /* MDAppDelegate.h */,
 				646BBA2616EA868D00F54285 /* MDAppDelegate.m */,
 				646BBA2E16EA868D00F54285 /* MDViewController.h */,
@@ -164,6 +172,7 @@
 				646BBA2B16EA868D00F54285 /* Default@2x.png in Resources */,
 				646BBA2D16EA868D00F54285 /* Default-568h@2x.png in Resources */,
 				646BBA3316EA868D00F54285 /* MDViewController.xib in Resources */,
+				646BBA4516EA8B6F00F54285 /* MDSecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				646BBA2316EA868D00F54285 /* main.m in Sources */,
 				646BBA2716EA868D00F54285 /* MDAppDelegate.m in Sources */,
 				646BBA3016EA868D00F54285 /* MDViewController.m in Sources */,
+				646BBA4416EA8B6F00F54285 /* MDSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +309,7 @@
 				646BBA3816EA868D00F54285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
