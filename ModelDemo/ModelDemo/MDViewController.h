@@ -10,4 +10,6 @@
 
 @interface MDViewController : UIViewController
 
+- (IBAction)showSecondViewPressed:(UIButton*)sender;
+
 @end
