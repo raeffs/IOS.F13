@@ -27,6 +27,23 @@
     _thirdViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    _showCounter++;
+    if (_showCounter >= 5)
+    {
+        _counterLabel.text = [NSString stringWithFormat:@"You've watched me %i times, old pervert!!!", _showCounter];
+    }
+    else if (_showCounter >= 2)
+    {
+        _counterLabel.text = [NSString stringWithFormat:@"You've watched me %i times, stalker!!", _showCounter];
+    }
+    else
+    {
+        _counterLabel.text = [NSString stringWithFormat:@"Hi there!"];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

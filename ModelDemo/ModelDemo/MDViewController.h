@@ -10,6 +10,10 @@
 
 @interface MDViewController : UIViewController
 
+@property int showCounter;
+
+@property(strong) IBOutlet UILabel * counterLabel;
+
 @property(strong) UIViewController * secondViewController;
 
 @property(strong) UIViewController * thirdViewController;
