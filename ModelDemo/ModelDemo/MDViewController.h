@@ -12,6 +12,10 @@
 
 @property(strong) UIViewController * secondViewController;
 
+@property(strong) UIViewController * thirdViewController;
+
 - (IBAction)showSecondViewPressed:(UIButton*)sender;
+
+- (IBAction)showThirdViewPressed:(UIButton*)sender;
 
 @end

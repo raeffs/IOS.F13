@@ -8,6 +8,7 @@
 
 #import "MDViewController.h"
 #import "MDSecondViewController.h"
+#import "MDThirdViewController.h"
 
 @interface MDViewController ()
 
@@ -21,6 +22,9 @@
 	
     _secondViewController = [[MDSecondViewController alloc] init];
     _secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    _thirdViewController = [[MDThirdViewController alloc] init];
+    _thirdViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,5 +36,10 @@
 - (IBAction)showSecondViewPressed:(UIButton*)sender
 {
     [self presentViewController:_secondViewController animated:true completion:nil];
+}
+
+- (IBAction)showThirdViewPressed:(UIButton*)sender
+{
+    [self presentViewController:_thirdViewController animated:true completion:nil];
 }
 @end

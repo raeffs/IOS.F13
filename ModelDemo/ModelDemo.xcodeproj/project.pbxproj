@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640BF1EA16EB932F005762B4 /* MDThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640BF1E816EB932F005762B4 /* MDThirdViewController.m */; };
+		640BF1EB16EB932F005762B4 /* MDThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640BF1E916EB932F005762B4 /* MDThirdViewController.xib */; };
 		646BBA1716EA868D00F54285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646BBA1616EA868D00F54285 /* UIKit.framework */; };
 		646BBA1916EA868D00F54285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646BBA1816EA868D00F54285 /* Foundation.framework */; };
 		646BBA1B16EA868D00F54285 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646BBA1A16EA868D00F54285 /* CoreGraphics.framework */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640BF1E716EB932F005762B4 /* MDThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDThirdViewController.h; sourceTree = "<group>"; };
+		640BF1E816EB932F005762B4 /* MDThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDThirdViewController.m; sourceTree = "<group>"; };
+		640BF1E916EB932F005762B4 /* MDThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDThirdViewController.xib; sourceTree = "<group>"; };
 		646BBA1316EA868D00F54285 /* ModelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646BBA1616EA868D00F54285 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		646BBA1816EA868D00F54285 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,11 +93,14 @@
 		646BBA1C16EA868D00F54285 /* ModelDemo */ = {
 			isa = PBXGroup;
 			children = (
+				646BBA2516EA868D00F54285 /* MDAppDelegate.h */,
+				646BBA2616EA868D00F54285 /* MDAppDelegate.m */,
 				646BBA4116EA8B6F00F54285 /* MDSecondViewController.h */,
 				646BBA4216EA8B6F00F54285 /* MDSecondViewController.m */,
 				646BBA4316EA8B6F00F54285 /* MDSecondViewController.xib */,
-				646BBA2516EA868D00F54285 /* MDAppDelegate.h */,
-				646BBA2616EA868D00F54285 /* MDAppDelegate.m */,
+				640BF1E716EB932F005762B4 /* MDThirdViewController.h */,
+				640BF1E816EB932F005762B4 /* MDThirdViewController.m */,
+				640BF1E916EB932F005762B4 /* MDThirdViewController.xib */,
 				646BBA2E16EA868D00F54285 /* MDViewController.h */,
 				646BBA2F16EA868D00F54285 /* MDViewController.m */,
 				646BBA3116EA868D00F54285 /* MDViewController.xib */,
@@ -173,6 +181,7 @@
 				646BBA2D16EA868D00F54285 /* Default-568h@2x.png in Resources */,
 				646BBA3316EA868D00F54285 /* MDViewController.xib in Resources */,
 				646BBA4516EA8B6F00F54285 /* MDSecondViewController.xib in Resources */,
+				640BF1EB16EB932F005762B4 /* MDThirdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +196,7 @@
 				646BBA2716EA868D00F54285 /* MDAppDelegate.m in Sources */,
 				646BBA3016EA868D00F54285 /* MDViewController.m in Sources */,
 				646BBA4416EA8B6F00F54285 /* MDSecondViewController.m in Sources */,
+				640BF1EA16EB932F005762B4 /* MDThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
