@@ -37,6 +37,6 @@
 
 - (IBAction)backPressed:(UIButton*)sender
 {
-    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 @end

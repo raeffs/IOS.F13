@@ -7,6 +7,7 @@
 //
 
 #import "MDViewController.h"
+#import "MDSecondViewController.h"
 
 @interface MDViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    _secondViewController = [[MDSecondViewController alloc] init];
+    _secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,6 +31,6 @@
 
 - (IBAction)showSecondViewPressed:(UIButton*)sender
 {
-    
+    [self presentViewController:_secondViewController animated:true completion:nil];
 }
 @end
