@@ -30,10 +30,13 @@
     
     // the loop :)
     while (YES) {
-        OTTestClass * testclass = [[OTTestClass alloc] init];
-        [testclass release];
-        testclass = nil;
-        [NSThread sleepForTimeInterval:0.005];
+        NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+        for (int i = 0; i < 1000; i++) {
+            OTTestClass * testclass = [[OTTestClass alloc] init];
+            [testclass autorelease];
+            [NSThread sleepForTimeInterval:0.005];
+        }
+        [pool drain];
     }
     
     return YES;
