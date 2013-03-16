@@ -40,6 +40,7 @@
 		64732D6E16F46CE900C9BAEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OTViewController.xib; sourceTree = "<group>"; };
 		64732D7516F46D3C00C9BAEE /* OTTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTestClass.h; sourceTree = "<group>"; };
 		64732D7616F46D3C00C9BAEE /* OTTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTestClass.m; sourceTree = "<group>"; };
+		64732D7816F473A200C9BAEE /* OTTestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTTestProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				64732D5916F46CE900C9BAEE /* Supporting Files */,
 				64732D7516F46D3C00C9BAEE /* OTTestClass.h */,
 				64732D7616F46D3C00C9BAEE /* OTTestClass.m */,
+				64732D7816F473A200C9BAEE /* OTTestProtocol.h */,
 			);
 			path = "ObjC-Test";
 			sourceTree = "<group>";
