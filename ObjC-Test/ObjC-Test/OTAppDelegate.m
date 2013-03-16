@@ -28,6 +28,8 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
+    [self doSelectorTesting];
+    
     // the loop :)
     while (YES) {
         NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -40,6 +42,40 @@
     }
     
     return YES;
+}
+
+- (void) doSelectorTesting
+{
+    NSString * object1 = @"Test String";
+    [self testSelector:@"foo" onObject:object1];
+    [self testSelector:@"doThisRequiredThing" onObject:object1];
+    [self testSelector:@"doThisOptionalThing" onObject:object1];
+    [self testSelector:@"myNewStringMethod" onObject:object1];
+    
+    OTTestClass * object2 = [[OTTestClass alloc] init];
+    [self testSelector:@"foo" onObject:object2];
+    [self testSelector:@"doThisRequiredThing" onObject:object2];
+    [self testSelector:@"doThisOptionalThing" onObject:object2];
+    [self testSelector:@"myNewStringMethod" onObject:object2];
+    
+    UIView * object3 = [[UIView alloc] init];
+    [self testSelector:@"foo" onObject:object3];
+    [self testSelector:@"doThisRequiredThing" onObject:object3];
+    [self testSelector:@"doThisOptionalThing" onObject:object3];
+    [self testSelector:@"myNewStringMethod" onObject:object3];
+}
+
+- (void) testSelector:(NSString *)selectorName onObject:(id<NSObject>)object
+{
+    SEL selector = NSSelectorFromString(selectorName);
+    if ([object respondsToSelector:selector])
+    {
+        NSLog(@"'%s' does understand '%@'", object_getClassName(object) , selectorName, nil);
+    }
+    else
+    {
+        NSLog(@"'%s' does NOT understand '%@'", object_getClassName(object) , selectorName, nil);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

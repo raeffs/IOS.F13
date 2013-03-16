@@ -16,4 +16,8 @@
 
 @property (strong, nonatomic) OTViewController *viewController;
 
+- (void)doSelectorTesting;
+
+- (void)testSelector:(NSString*)selectorName onObject:(id<NSObject>)object;
+
 @end
