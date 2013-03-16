@@ -9,6 +9,7 @@
 #import "OTAppDelegate.h"
 
 #import "OTViewController.h"
+#import "OTTestClass.h"
 
 @implementation OTAppDelegate
 
@@ -26,6 +27,13 @@
     self.viewController = [[[OTViewController alloc] initWithNibName:@"OTViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    // the loop :)
+    while (YES) {
+        [[OTTestClass alloc] init];
+        [NSThread sleepForTimeInterval:0.005];
+    }
+    
     return YES;
 }
 
