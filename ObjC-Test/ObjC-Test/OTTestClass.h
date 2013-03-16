@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OTTestProtocol.h"
 
-@interface OTTestClass : NSObject
+@interface OTTestClass : NSObject <OTTestProtocol>
 
 @property int i;
 

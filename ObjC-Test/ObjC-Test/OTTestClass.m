@@ -26,4 +26,9 @@
     [super dealloc];
 }
 
+- (void) doThisRequiredThing
+{
+    
+}
+
 @end
