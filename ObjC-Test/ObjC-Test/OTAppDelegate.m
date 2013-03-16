@@ -30,7 +30,9 @@
     
     // the loop :)
     while (YES) {
-        [[OTTestClass alloc] init];
+        OTTestClass * testclass = [[OTTestClass alloc] init];
+        [testclass release];
+        testclass = nil;
         [NSThread sleepForTimeInterval:0.005];
     }
     
