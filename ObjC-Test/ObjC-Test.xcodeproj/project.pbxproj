@@ -18,6 +18,7 @@
 		64732D6916F46CE900C9BAEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64732D6816F46CE900C9BAEE /* Default-568h@2x.png */; };
 		64732D6C16F46CE900C9BAEE /* OTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64732D6B16F46CE900C9BAEE /* OTViewController.m */; };
 		64732D6F16F46CE900C9BAEE /* OTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64732D6D16F46CE900C9BAEE /* OTViewController.xib */; };
+		64732D7716F46D3C00C9BAEE /* OTTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 64732D7616F46D3C00C9BAEE /* OTTestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		64732D6A16F46CE900C9BAEE /* OTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTViewController.h; sourceTree = "<group>"; };
 		64732D6B16F46CE900C9BAEE /* OTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTViewController.m; sourceTree = "<group>"; };
 		64732D6E16F46CE900C9BAEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OTViewController.xib; sourceTree = "<group>"; };
+		64732D7516F46D3C00C9BAEE /* OTTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTestClass.h; sourceTree = "<group>"; };
+		64732D7616F46D3C00C9BAEE /* OTTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				64732D6B16F46CE900C9BAEE /* OTViewController.m */,
 				64732D6D16F46CE900C9BAEE /* OTViewController.xib */,
 				64732D5916F46CE900C9BAEE /* Supporting Files */,
+				64732D7516F46D3C00C9BAEE /* OTTestClass.h */,
+				64732D7616F46D3C00C9BAEE /* OTTestClass.m */,
 			);
 			path = "ObjC-Test";
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				64732D5F16F46CE900C9BAEE /* main.m in Sources */,
 				64732D6316F46CE900C9BAEE /* OTAppDelegate.m in Sources */,
 				64732D6C16F46CE900C9BAEE /* OTViewController.m in Sources */,
+				64732D7716F46D3C00C9BAEE /* OTTestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
