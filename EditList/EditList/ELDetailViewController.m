@@ -7,39 +7,27 @@
 //
 
 #import "ELDetailViewController.h"
+#import "ELEditViewController.h"
 
 @interface ELDetailViewController ()
-- (void)configureView;
 @end
 
 @implementation ELDetailViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    
+    self.editViewControler = [[ELEditViewController alloc] init];
+    self.editViewControler.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    self.editViewControler.personData = self.personData;
+    
+    self.firstNameLabel.text = self.personData.firstName;
+    self.lastNameLabel.text = self.personData.lastName;
+    self.plzLabel.text = [NSString stringWithFormat:@"%i", self.personData.plz, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +43,11 @@
         self.title = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
+}
+
+- (IBAction)showEditViewPressed:(UIButton *)sender
+{
+    [self presentViewController:self.editViewControler animated:true completion:nil];
 }
 							
 @end

@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMPersonData.h"
+#import "ELEditViewController.h"
 
 @interface ELDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) CMPersonData *personData;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong) IBOutlet UILabel *firstNameLabel;
+@property (strong) IBOutlet UILabel *lastNameLabel;
+@property (strong) IBOutlet UILabel *plzLabel;
+
+- (IBAction)showEditViewPressed:(UIButton*)sender;
+
+@property(strong) ELEditViewController * editViewControler;
+
 @end

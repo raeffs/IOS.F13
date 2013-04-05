@@ -20,6 +20,10 @@
 		6428C80D170EE15A00A04041 /* ELDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6428C80C170EE15A00A04041 /* ELDetailViewController.m */; };
 		6428C810170EE15A00A04041 /* ELMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428C80E170EE15A00A04041 /* ELMasterViewController.xib */; };
 		6428C813170EE15A00A04041 /* ELDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428C811170EE15A00A04041 /* ELDetailViewController.xib */; };
+		6428C81D170EE21900A04041 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6428C81A170EE21900A04041 /* CMDataProvider.m */; };
+		6428C81E170EE21900A04041 /* CMPersonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6428C81C170EE21900A04041 /* CMPersonData.m */; };
+		646BED5A170EF8D8008363C2 /* ELEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646BED58170EF8D8008363C2 /* ELEditViewController.m */; };
+		646BED5B170EF8D8008363C2 /* ELEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646BED59170EF8D8008363C2 /* ELEditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,13 @@
 		6428C80C170EE15A00A04041 /* ELDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELDetailViewController.m; sourceTree = "<group>"; };
 		6428C80F170EE15A00A04041 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ELMasterViewController.xib; sourceTree = "<group>"; };
 		6428C812170EE15A00A04041 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ELDetailViewController.xib; sourceTree = "<group>"; };
+		6428C819170EE21900A04041 /* CMDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataProvider.h; sourceTree = "<group>"; };
+		6428C81A170EE21900A04041 /* CMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataProvider.m; sourceTree = "<group>"; };
+		6428C81B170EE21900A04041 /* CMPersonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPersonData.h; sourceTree = "<group>"; };
+		6428C81C170EE21900A04041 /* CMPersonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPersonData.m; sourceTree = "<group>"; };
+		646BED57170EF8D8008363C2 /* ELEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELEditViewController.h; sourceTree = "<group>"; };
+		646BED58170EF8D8008363C2 /* ELEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELEditViewController.m; sourceTree = "<group>"; };
+		646BED59170EF8D8008363C2 /* ELEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELEditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +101,19 @@
 			children = (
 				6428C7FF170EE15A00A04041 /* ELAppDelegate.h */,
 				6428C800170EE15A00A04041 /* ELAppDelegate.m */,
+				6428C819170EE21900A04041 /* CMDataProvider.h */,
+				6428C81A170EE21900A04041 /* CMDataProvider.m */,
+				6428C81B170EE21900A04041 /* CMPersonData.h */,
+				6428C81C170EE21900A04041 /* CMPersonData.m */,
 				6428C808170EE15A00A04041 /* ELMasterViewController.h */,
 				6428C809170EE15A00A04041 /* ELMasterViewController.m */,
 				6428C80B170EE15A00A04041 /* ELDetailViewController.h */,
 				6428C80C170EE15A00A04041 /* ELDetailViewController.m */,
 				6428C80E170EE15A00A04041 /* ELMasterViewController.xib */,
 				6428C811170EE15A00A04041 /* ELDetailViewController.xib */,
+				646BED57170EF8D8008363C2 /* ELEditViewController.h */,
+				646BED58170EF8D8008363C2 /* ELEditViewController.m */,
+				646BED59170EF8D8008363C2 /* ELEditViewController.xib */,
 				6428C7F7170EE15A00A04041 /* Supporting Files */,
 			);
 			path = EditList;
@@ -173,6 +191,7 @@
 				6428C807170EE15A00A04041 /* Default-568h@2x.png in Resources */,
 				6428C810170EE15A00A04041 /* ELMasterViewController.xib in Resources */,
 				6428C813170EE15A00A04041 /* ELDetailViewController.xib in Resources */,
+				646BED5B170EF8D8008363C2 /* ELEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +206,9 @@
 				6428C801170EE15A00A04041 /* ELAppDelegate.m in Sources */,
 				6428C80A170EE15A00A04041 /* ELMasterViewController.m in Sources */,
 				6428C80D170EE15A00A04041 /* ELDetailViewController.m in Sources */,
+				6428C81D170EE21900A04041 /* CMDataProvider.m in Sources */,
+				6428C81E170EE21900A04041 /* CMPersonData.m in Sources */,
+				646BED5A170EF8D8008363C2 /* ELEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +339,7 @@
 				6428C818170EE15A00A04041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

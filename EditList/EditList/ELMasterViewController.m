@@ -10,8 +10,11 @@
 
 #import "ELDetailViewController.h"
 
+#import "CMDataProvider.h"
+#import "CMPersonData.h"
+
 @interface ELMasterViewController () {
-    NSMutableArray *_objects;
+    CMDataProvider *dataProvider;
 }
 @end
 
@@ -21,7 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = NSLocalizedString(@"MasterView", @"MasterView");
     }
     return self;
 }
@@ -29,6 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    dataProvider = [CMDataProvider sharedDataProvider];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -44,12 +50,9 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    //[_objects insertObject:[NSDate date] atIndex:0];
+    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table View
@@ -61,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [dataProvider.memberPersons count];
 }
 
 // Customize the appearance of table view cells.
@@ -75,18 +78,17 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    CMPersonData *person = dataProvider.memberPersons[indexPath.row];
+    cell.textLabel.text = [person getDisplayName];
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
+/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -96,6 +98,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+*/
 
 /*
 // Override to support rearranging the table view.
@@ -118,8 +121,9 @@
     if (!self.detailViewController) {
         self.detailViewController = [[ELDetailViewController alloc] initWithNibName:@"ELDetailViewController" bundle:nil];
     }
-    NSDate *object = _objects[indexPath.row];
-    self.detailViewController.detailItem = object;
+    
+    CMPersonData *person = dataProvider.memberPersons[indexPath.row];
+    self.detailViewController.personData = person;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 
