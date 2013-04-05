@@ -19,6 +19,7 @@
 @property (strong) IBOutlet UILabel *plzLabel;
 
 - (IBAction)showEditViewPressed:(UIButton*)sender;
+- (void) updateView;
 
 @property(strong) ELEditViewController * editViewControler;
 

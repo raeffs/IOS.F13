@@ -23,11 +23,11 @@
     
     self.editViewControler = [[ELEditViewController alloc] init];
     self.editViewControler.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    self.editViewControler.personData = self.personData;
-    
-    self.firstNameLabel.text = self.personData.firstName;
-    self.lastNameLabel.text = self.personData.lastName;
-    self.plzLabel.text = [NSString stringWithFormat:@"%i", self.personData.plz, nil];
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self updateView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +47,16 @@
 
 - (IBAction)showEditViewPressed:(UIButton *)sender
 {
+    self.editViewControler.personData = self.personData;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView) name:@"EditViewDismissed" object:nil];
     [self presentViewController:self.editViewControler animated:true completion:nil];
+}
+
+- (void) updateView
+{
+    self.firstNameLabel.text = self.personData.firstName;
+    self.lastNameLabel.text = self.personData.lastName;
+    self.plzLabel.text = [NSString stringWithFormat:@"%i", self.personData.plz, nil];
 }
 							
 @end

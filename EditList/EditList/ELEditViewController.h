@@ -18,5 +18,6 @@
 @property (strong) IBOutlet UITextField *plzLabel;
 
 - (IBAction)editButtonPressed:(UIButton*)sender;
+- (IBAction)editingDidEndOnExit:(UITextField *)sender;
 
 @end
