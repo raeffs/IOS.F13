@@ -76,7 +76,26 @@
 
 - (IBAction)testOperationQueue:(id)sender
 {
+    __block NSMutableArray * orderArray = [[NSMutableArray alloc] initWithCapacity:3];
     
+    void (^operationBlock1)(void) = ^(void){ [orderArray addObject:@"1"]; };
+    void (^operationBlock2)(void) = ^(void){ [orderArray addObject:@"2"]; };
+    void (^operationBlock3)(void) = ^(void){ [orderArray addObject:@"3"]; };
+    
+    NSBlockOperation * operation1 = [NSBlockOperation blockOperationWithBlock:operationBlock1];
+    NSBlockOperation * operation2 = [NSBlockOperation blockOperationWithBlock:operationBlock2];
+    NSBlockOperation * operation3 = [NSBlockOperation blockOperationWithBlock:operationBlock3];
+    
+    [operation1 addDependency:operation2];
+    [operation1 addDependency:operation3];
+    [operation2 addDependency:operation3];
+    
+    NSOperationQueue * operationQueue = [[NSOperationQueue alloc] init];
+    [operationQueue addOperations:[NSArray arrayWithObjects:operation1, operation2, operation3, nil] waitUntilFinished:YES];
+    
+    NSString * message = [NSString stringWithFormat:@"The three operations were executed in the following order: %@, %@, %@.", [orderArray objectAtIndex:0], [orderArray objectAtIndex:1], [orderArray objectAtIndex:2], nil];
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Block Operation Ordering" message:message delegate:nil cancelButtonTitle:@"OK, thanx" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 - (NSArray*)getXMLData
