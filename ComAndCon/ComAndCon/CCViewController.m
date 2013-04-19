@@ -17,8 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _tmpXmlArray = [[NSMutableArray alloc] initWithCapacity:5];
-    _pickerDummyStringArray = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
+    self.pickerDummyStringArray = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
     [self useDummyData];
 }
 
@@ -35,12 +34,12 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [_pickerStringArray count];
+    return [self.pickerStringArray count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [_pickerStringArray objectAtIndex:row];
+    return [self.pickerStringArray objectAtIndex:row];
 }
 
 - (IBAction)dataSourceChanged:(UISegmentedControl*)sender
@@ -62,17 +61,17 @@
 
 - (void)useDummyData
 {
-    _pickerStringArray = _pickerDummyStringArray;
+    self.pickerStringArray = self.pickerDummyStringArray;
 }
 
 - (void)useXmlData
 {
-    _pickerStringArray = [self getXMLData];
+    self.pickerStringArray = [self getXMLData];
 }
 
 - (void)useJsonData
 {
-    
+    self.pickerStringArray = [self getJSONData];
 }
 
 - (IBAction)testOperationQueue:(id)sender
@@ -82,6 +81,7 @@
 
 - (NSArray*)getXMLData
 {
+    self.tmpXmlArray = [[NSMutableArray alloc] initWithCapacity:5];
     NSXMLParser * parser = [[NSXMLParser alloc] initWithContentsOfURL: [NSURL URLWithString:@"http://wherever.ch/hslu/iPhoneAdressData.xml"]];
     [parser setDelegate:self];
     [parser parse];
@@ -92,12 +92,18 @@
 {
     if (![elementName isEqual: @"Entry"]) { return; }
     NSString * item = [NSString stringWithFormat:@"%@ %@", [attributeDict valueForKey:@"firstName"], [attributeDict valueForKey:@"lastName"], nil];
-    [_tmpXmlArray addObject:item];
+    [self.tmpXmlArray addObject:item];
 }
 
 - (NSArray*)getJSONData
 {
-    return nil;
+    self.tmpXmlArray = [[NSMutableArray alloc] initWithCapacity:5];
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://wherever.ch/hslu/iPhoneAdressData.json"]];
+    NSArray * array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    for (NSDictionary * item in array) {
+        [self.tmpXmlArray addObject:[NSString stringWithFormat:@"%@ %@", [item valueForKey:@"firstName"], [item valueForKey:@"lastName"], nil]];
+    }
+    return [NSArray arrayWithArray:self.tmpXmlArray];
 }
 
 @end
