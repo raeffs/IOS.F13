@@ -17,9 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    _tmpXmlArray = [[NSMutableArray alloc] initWithCapacity:5];
     _pickerDummyStringArray = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
-    _pickerStringArray = _pickerDummyStringArray;
+    [self useDummyData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +45,33 @@
 
 - (IBAction)dataSourceChanged:(UISegmentedControl*)sender
 {
+    switch ([sender selectedSegmentIndex]) {
+        default:
+        case 0:
+            [self useDummyData];
+            break;
+        case 1:
+            [self useXmlData];
+            break;
+        case 2:
+            [self useJsonData];
+            break;
+    }
+    [self.pickerView reloadAllComponents];
+}
+
+- (void)useDummyData
+{
+    _pickerStringArray = _pickerDummyStringArray;
+}
+
+- (void)useXmlData
+{
+    _pickerStringArray = [self getXMLData];
+}
+
+- (void)useJsonData
+{
     
 }
 
@@ -55,7 +82,17 @@
 
 - (NSArray*)getXMLData
 {
-    return nil;
+    NSXMLParser * parser = [[NSXMLParser alloc] initWithContentsOfURL: [NSURL URLWithString:@"http://wherever.ch/hslu/iPhoneAdressData.xml"]];
+    [parser setDelegate:self];
+    [parser parse];
+    return [NSArray arrayWithArray:self.tmpXmlArray];
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    if (![elementName isEqual: @"Entry"]) { return; }
+    NSString * item = [NSString stringWithFormat:@"%@ %@", [attributeDict valueForKey:@"firstName"], [attributeDict valueForKey:@"lastName"], nil];
+    [_tmpXmlArray addObject:item];
 }
 
 - (NSArray*)getJSONData
