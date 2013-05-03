@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface FWViewController : UIViewController
+@interface FWViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
+
+@property(strong) IBOutlet UILabel * firstnameLabel;
+@property(strong) IBOutlet UILabel * lastnameLabel;
+
+- (IBAction)selectPeoplePressed:(UIButton*)sender;
 
 @end
