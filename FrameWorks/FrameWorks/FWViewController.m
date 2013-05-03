@@ -51,4 +51,9 @@
     return NO;
 }
 
+- (void)showOnMapPressed:(UIButton *)sender
+{
+    
+}
+
 @end

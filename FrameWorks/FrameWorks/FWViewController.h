@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface FWViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 
@@ -16,5 +18,9 @@
 @property(strong) IBOutlet UILabel * lastnameLabel;
 
 - (IBAction)selectPeoplePressed:(UIButton*)sender;
+
+@property(strong) IBOutlet MKMapView * mapView;
+
+- (IBAction)showOnMapPressed:(UIButton*)sender;
 
 @end
